@@ -10,11 +10,11 @@ Colegio Universitario de Cartago — Costa Rica
 
 ## Integrantes
 
- | Integrante | 
+ | Integrantes | 
 |---|
- | [Felipe Montenegro Artavia] | 
-| [Tiffany Mendez Quirós] |
-[Mariel Rodriguez Arguello ] | 
+ | Felipe Montenegro Artavia | 
+| Tiffany Mendez Quirós |
+Mariel Rodriguez Arguello  | 
 
 ## Descripción
 

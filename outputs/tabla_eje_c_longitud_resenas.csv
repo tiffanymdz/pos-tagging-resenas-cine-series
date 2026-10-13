@@ -1,3 +1,4 @@
-﻿periodo,resenas,media_palabras,mediana_palabras,diferencia_media,p_valor
-Antes de 2010,3151,177.6,157.0,,
-2010 en adelante,3132,202.8,182.5,25.2,< 0.001
+﻿metrica,antes_2010,2010_en_adelante,diferencia,p_valor
+Reseñas (n),3151,3132,,
+Palabras por reseña (media),177.6,202.8,25.2,< 0.001
+Palabras por reseña (mediana),157.0,182.5,25.5,< 0.001

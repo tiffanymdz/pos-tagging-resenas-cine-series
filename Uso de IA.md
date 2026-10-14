@@ -15,7 +15,7 @@ realizar los ajustes necesarios. También subimos el cuaderno y los resultados a
 
 
 
-#USOS DE LA IA Felipe Montenegro Artavia 
+#USOS DE LA IA
 
 #Qué herramientas de IA utilizaron y para qué tareas específicas.
 

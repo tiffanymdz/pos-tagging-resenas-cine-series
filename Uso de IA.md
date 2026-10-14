@@ -52,3 +52,36 @@ Usé la IA como apoyo y no como sustituto, si me sirvió para tener mas ideas y 
 #Qué modificaciones hicieron al código o al análisis generado por IA. 
 Detalles de presentación: pedí quitar la notación científica de los valores p y reordenar la tabla de longitud de reseñas, que tenía celdas vacías en la primera fila.
 Reseñas cortadas: decidí eliminarlas del corpus en lugar de volver a traducirlas.
+
+# Uso de IA
+
+## Herramientas utilizadas
+
+- **Claude (Anthropic)**, mediante chat.
+
+## Tareas en las que se usó
+
+- **Revisión de los datos:** análisis del CSV limpio (traducciones que parecían cortadas, oraciones pegadas sin espacio).
+- **POS Tagging:** adaptación de la demo del profe, que estaba en inglés, a español con spaCy (`es_core_news_md`) y con un etiquetador de NLTK entrenado con `cess_esp`.
+- **Métricas del eje B:** índice de negación e índice de adverbios de intensidad, y el archivo `src/metrics.py`.
+- **Depuración de errores:** `ModuleNotFoundError`, `NameError`, límite de tamaño de archivos en GitHub, problemas de rutas.
+
+En todos los casos, la IA propuso código o explicaciones y yo ejecuté todo en mi computadora, paso por paso, mostrando la salida antes de seguir.
+
+## Ejemplo de prompts
+
+ 1. > "hay algunas reseñas en español que se cortan a la mitad [...] eso puede afectar el tagging?"
+
+   Resultado: comparó las traducciones con el original en inglés. Las reseñas que yo veía cortadas estaban completas y era Excel recortando la vista, pero encontró oraciones pegadas sin espacio (por ejemplo, "corazón.Ver") en 3.031 reseñas, y propuso una expresión regular para corregirlas.
+
+## Reflexión
+
+La IA me ayudó sobre todo a entender el porqué de cada paso, no solo a obtener código: por qué NLTK necesita entrenarse para español, por qué hay que etiquetar los mismos tokens que spaCy para poder comparar, y por qué las métricas se calculan sin puntuación y por cada 100 tokens. Trabajar paso a paso, corriendo yo cada celda, me permitió encontrar errores concretos, como el modelo equivocado o una columna mal elegida.
+
+## Modificaciones al código
+
+- Reemplacé la demo del profe (en inglés, con `en_core_web_sm` y el `pos_tag` de NLTK) por un flujo en español con `es_core_news_md` y un etiquetador entrenado con `cess_esp`.
+- Etiqueté con NLTK **oración por oración**, y no toda la lista de tokens de una vez como indica la guía, para que el contexto del bigrama no pase de una oración a otra. La IA propuso este cambio y yo lo apliqué.
+- Guardé el resultado como `pos_analysis.csv.gz` porque GitHub no permite subir por la web archivos de más de 25 MB.
+- Reorganicé mis notebooks: quité celdas repetidas, ajusté las rutas a la carpeta `data/` y pasé las funciones de métricas a `src/metrics.py`.
+- Verifiqué los resultados: comprobé que `src/metrics.py` da los mismos números que el cálculo del notebook, y revisé a mano ocho reseñas que parecían cortadas.

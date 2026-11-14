@@ -412,10 +412,6 @@ Los CSV se guardan en UTF-8 con BOM para que Excel muestre bien las tildes. Para
 - Analizar más de dos periodos de tiempo.
 - Ampliar la revisión manual del etiquetado para estimar la exactitud real de cada herramienta.
 
-## Uso de inteligencia artificial
-
-El uso de herramientas de IA se documenta en `USO_DE_IA.md`. El modelo de traducción automática forma parte del pipeline del proyecto y se documenta en este README.
-
 ## Uso responsable
 
 Los resultados describen patrones en un corpus de reseñas traducidas automáticamente y no permiten atribuir causas. Deben interpretarse como un análisis académico y no como conclusiones generales sobre cómo se escriben las reseñas de cine en español.

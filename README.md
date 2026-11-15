@@ -1,5 +1,4 @@
-[README (1).md](https://github.com/user-attachments/files/34868124/README.1.md)
-[README.md](https://github.com/user-attachments/files/34838925/README.md)
+
 <div align="center">
 
 # 🎬 Análisis Morfosintáctico de Reseñas de Cine y Series

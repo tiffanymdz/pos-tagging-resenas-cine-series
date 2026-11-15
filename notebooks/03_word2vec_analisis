@@ -5,11 +5,7 @@
    "metadata": {},
    "source": [
     "# Análisis de representaciones de reseñas: BoW, TF-IDF y Word2Vec\n",
-    "\n",
-    "**Persona 2 — Proyecto de reseñas de cine y series.** Ejecutar **Kernel → Restart & Run All** desde la carpeta `notebooks/` del repositorio. La primera celda detecta la raíz automáticamente: no usa `C:\\Users\\...`, Descargas ni `__file__`.\n",
-    "\n",
-    "**Entradas:** `data/results/pos_analysis.csv.gz` (o `.csv`) y `data/processed/resenas_limpias.csv`. **Salidas:** `outputs/persona2/`. El corpus usa la columna `token` en minúsculas (no lemas), conserva los IDs y entrena CBOW y Skip-Gram con semilla 42. El aviso de Gensim `our_dot_float` observado durante la ejecución no impidió generar y guardar ambos modelos, pero podría depender de la instalación local.\n"
-   ]
+   
   },
   {
    "cell_type": "code",

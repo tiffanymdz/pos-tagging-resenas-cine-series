@@ -5,7 +5,7 @@ Funciones para el notebook 03 (BoW / TF-IDF y Word2Vec) del proyecto de
 reseñas de cine en español.
 
 Qué contiene
-------------
+-----------
 1. Preparación del corpus a partir de ``pos_analysis.csv`` (tokens originales por defecto).
 2. Bolsa de palabras (BoW) y TF-IDF con scikit-learn.
 3. Entrenamiento de Word2Vec en sus dos arquitecturas: CBOW (sg=0) y

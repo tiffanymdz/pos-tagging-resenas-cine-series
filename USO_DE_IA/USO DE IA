@@ -1,58 +1,79 @@
-¿Cómo se utilizó la IA?
+<div align="center">
 
-El uso de la inteligencia artificial fue de gran ayuda como herramienta de apoyo 
-durante el desarrollo de nuestro proyecto, ya que nos permitió profundizar en el tema,
-orientarnos en la asignación de etiquetas, comprender mejor las comparaciones realizadas y
-elegir los gráficos más adecuados para representar e interpretar los resultados.
+# DOCUMENTACIÓN DEL USO DE INTELIGENCIA ARTIFICIAL
 
-Además, nos ayudó a aclarar dudas y comprender mejor algunos de los conceptos relacionados
-con el análisis de los datos.
+### Proyecto: Análisis de reseñas de películas mediante técnicas de procesamiento de lenguaje natural
 
-¿Qué hicimos nosotros?
+**Bolsa de Palabras (BoW) · TF-IDF · Word2Vec (CBOW y Skip-Gram)**
 
-Nos encargamos de desarrollar el proyecto, trabajar con los datos, ejecutar y revisar los resultados,
-analizar las etiquetas y realizar los ajustes necesarios. 
-También subimos el cuaderno y los resultados al repositorio de GitHub.
+---
 
-Herramienta: Claude (Anthropic).
+**Colegio Universitario de Cartago (CUC)**  
+**Diplomado en Big Data**
 
+**Documento de apoyo metodológico**
 
+**Noviembre de 2026**
 
-#USOS DE LA IA Felipe Montenegro Artavia 
+---
 
-#Qué herramientas de IA utilizaron y para qué tareas específicas.
+*Registro general del uso de herramientas de inteligencia artificial durante el desarrollo del proyecto*
 
-Se utilzó Claude (Anthropic)
-en problemas con los datos, en el diseño del muestreo y en el eje c ayudó a calcular metricas y graficos.
+</div>
 
-#Ejemplos de prompts utilizados (mínimo 3 a 5 ejemplos representativos). 
-Detección de un problema en los datos
+## 1. Introducción
 
-Tengo una consulta sobre el archivo CSV después del proceso de limpieza de datos. He notado que algunas reseñas escritas en español parecen estar incompletas o cortadas, ya que ciertas frases terminan de forma repetina o no tienen sentido completo.
+Durante el desarrollo del proyecto se utilizaron herramientas de inteligencia artificial como recursos de consulta y apoyo técnico. Su función principal fue facilitar la comprensión de conceptos, orientar la revisión del código y apoyar la resolución de dudas surgidas en distintas etapas del trabajo.
 
-Ayúdame a investigar este problema en el conjunto de datos.
+La IA se empleó como complemento del proceso de aprendizaje y desarrollo, no como sustituto del análisis y las decisiones del equipo.
 
-Cómo asegurarme de un resultado
+## 2. Herramientas utilizadas
 
-Necesito verificar la calidad de las traducciones de las reseñas de mi archivo CSV limpio. ¿Cómo puedo asegurarme de que las traducciones al español estén completas y que no existan reseñas cortadas, incompletas o que hayan perdido parte de su contenido durante el proceso de traducción o limpieza?
+Se consultaron herramientas de asistencia basadas en inteligencia artificial, entre ellas **Claude Code** y **ChatGPT**, para aclarar dudas técnicas, comprender fragmentos de código y recibir orientación sobre procedimientos relacionados con el proyecto.
 
-Tamaño del corpus y diseño del muestreo
+## 3. Finalidades de uso
 
-Necesito construir un corpus de 6.000 reseñas para mi proyecto de análisis de texto. Ayúdame a verificar que el archivo CSV limpio cumpla con este requisito y que la selección de las reseñas respete el diseño del muestreo establecido.
+| Área | Aplicación de la IA |
+|:--|:--|
+| Comprensión del código | Explicación de instrucciones, funciones y organización general de los scripts. |
+| Resolución de errores | Orientación para identificar posibles causas de fallos de ejecución y revisar el entorno de trabajo. |
+| Preparación y revisión de datos | Consultas sobre duplicados, valores vacíos, longitud de textos y distribución de reseñas. |
+| Entrenamiento de modelos | Orientación conceptual sobre la preparación del corpus, el entrenamiento de Word2Vec y la interpretación de los vectores. |
+| Extracción y almacenamiento | Aclaración de dudas sobre *web scraping*, respuestas HTTP y el manejo de información en MongoDB. |
 
-El muestreo se organiza de la siguiente manera:
+## 4. Ejemplos representativos de consultas
 
-5 géneros cinematográficos × 2 periodos, para un total de 10 grupos o celdas de muestreo.
+Las siguientes consultas ilustran el tipo de apoyo solicitado, sin constituir un registro exhaustivo:
 
-Una cuota objetivo de 640 reseñas por celda, según el diseño propuesto. Verifica esta cuota, ya que 640 × 10 equivale a 6.400 reseñas y no a 6.000. Propón una distribución coherente que permita alcanzar exactamente las 6.000 reseñas sin alterar los criterios del proyecto.
+> **Comprensión y depuración:** ¿Cuál podría ser la causa de un error al ejecutar una celda de un notebook con un entorno virtual de Python y cómo se puede comprobar?
 
- #Reflexión sobre cómo la IA ayudó en su aprendizaje (1 a 2 párrafos). 
-La IA me ayudó a avanzar en las partes técnicas que no dominaba del todo: cómo muestrear de forma estratificada con semilla fija, cómo traducir un corpus largo en Colab guardando el avance, y cómo comparar dos grupos con una prueba estadística.
-Lo más importante que aprendí es que la salida de la IA hay que verificarla.
-Usé la IA como apoyo y no como sustituto, si me sirvió para tener mas ideas y complementar con lo que ya tenía. Ya que habian algunas cosas que no quedaban del todo claras y la IA me ayudó a que quedara mas claro.
+> **Entrenamiento:** ¿Qué diferencias existen entre CBOW y Skip-Gram y qué aspectos deben revisarse al entrenar Word2Vec con reseñas de películas?
 
+> **Calidad de datos:** ¿Cómo identificar reseñas duplicadas, textos vacíos o demasiado cortos en MongoDB, y qué consecuencias tendría filtrarlos?
 
-#Qué modificaciones hicieron al código o al análisis generado por IA. 
-Detalles de presentación: pedí quitar la notación científica de los valores p y reordenar la tabla de longitud de reseñas, que tenía celdas vacías en la primera fila.
-Reseñas cortadas: decidí eliminarlas del corpus en lugar de volver a traducirlas.
+> **Extracción de datos:** ¿Qué medidas apropiadas se pueden aplicar ante una respuesta HTTP 429, como pausas adaptativas y reanudación controlada de solicitudes?
 
+## 5. Revisión y adaptación del trabajo
+
+Las orientaciones recibidas se utilizaron como referencias para revisar los procedimientos del proyecto. Entre los ajustes considerados se encuentra la adaptación de la extracción de información cuando una página web no funcionó como se esperaba y fue necesario trabajar con una estructura HTML diferente.
+
+También se emplearon explicaciones para comprender mejor los mensajes de error, la organización de los datos y las etapas generales de preparación y entrenamiento de modelos.
+
+## 6. Reflexión sobre el uso de IA
+
+El uso de estas herramientas resultó útil para reforzar conocimientos de programación, extracción de información y bases de datos NoSQL. Asimismo, permitió comprender con mayor claridad algunos conceptos del procesamiento de lenguaje natural y el funcionamiento general del entrenamiento de modelos.
+
+Su principal aporte fue servir como recurso de consulta durante el aprendizaje y la solución de dificultades técnicas. La revisión de los resultados y la adaptación de las soluciones al contexto del proyecto continuaron siendo parte del trabajo del equipo.
+
+## 7. Conclusión
+
+La inteligencia artificial se utilizó de forma complementaria para apoyar la comprensión del código, orientar la solución de errores y facilitar el entendimiento de los procedimientos técnicos del proyecto. Este uso contribuyó al proceso de aprendizaje y al desarrollo de las actividades, manteniendo como eje central la revisión y aplicación de los conocimientos adquiridos.
+
+---
+
+<div align="center">
+
+**Proyecto académico · Procesamiento de Lenguaje Natural**  
+*Documento de declaración general del uso de inteligencia artificial*
+
+</div>

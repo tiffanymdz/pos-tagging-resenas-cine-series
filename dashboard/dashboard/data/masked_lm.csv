@@ -1,0 +1,31 @@
+﻿frase,prediccion,probabilidad
+La película fue [MASK].,estrenada,0.111
+La película fue [MASK].,titulada,0.0859
+La película fue [MASK].,prohibida,0.0766
+La película fue [MASK].,de,0.039
+La película fue [MASK].,distribuida,0.0389
+La actuación del protagonista fue [MASK].,excelente,0.0897
+La actuación del protagonista fue [MASK].,buena,0.0534
+La actuación del protagonista fue [MASK].,escasa,0.0415
+La actuación del protagonista fue [MASK].,fantástica,0.0371
+La actuación del protagonista fue [MASK].,notable,0.0339
+Los efectos especiales son [MASK].,escasos,0.0952
+Los efectos especiales son [MASK].,gratis,0.053
+Los efectos especiales son [MASK].,mínimos,0.046
+Los efectos especiales son [MASK].,increíbles,0.0433
+Los efectos especiales son [MASK].,limitados,0.024
+Esta película de terror fue [MASK].,prohibida,0.3418
+Esta película de terror fue [MASK].,estrenada,0.1128
+Esta película de terror fue [MASK].,producida,0.065
+Esta película de terror fue [MASK].,lanzada,0.0556
+Esta película de terror fue [MASK].,creada,0.0423
+Esta película de comedia fue [MASK].,prohibida,0.249
+Esta película de comedia fue [MASK].,estrenada,0.1539
+Esta película de comedia fue [MASK].,lanzada,0.0643
+Esta película de comedia fue [MASK].,producida,0.0493
+Esta película de comedia fue [MASK].,titulada,0.027
+El final de la historia fue [MASK].,el,0.0734
+El final de la historia fue [MASK].,[UNK],0.059
+El final de la historia fue [MASK].,desconocido,0.0408
+El final de la historia fue [MASK].,negro,0.0261
+El final de la historia fue [MASK].,corto,0.0206

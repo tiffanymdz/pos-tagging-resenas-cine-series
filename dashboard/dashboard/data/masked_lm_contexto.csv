@@ -1,0 +1,31 @@
+﻿frase,prediccion,probabilidad
+La película me hizo llorar de emoción. Fue una experiencia [MASK].,increíble,0.3514
+La película me hizo llorar de emoción. Fue una experiencia [MASK].,maravillosa,0.1649
+La película me hizo llorar de emoción. Fue una experiencia [MASK].,única,0.0547
+La película me hizo llorar de emoción. Fue una experiencia [MASK].,extraordinaria,0.037
+La película me hizo llorar de emoción. Fue una experiencia [MASK].,terrible,0.0352
+La película fue tan aburrida que casi me duermo. Fue [MASK].,divertido,0.1561
+La película fue tan aburrida que casi me duermo. Fue [MASK].,increíble,0.1526
+La película fue tan aburrida que casi me duermo. Fue [MASK].,horrible,0.1012
+La película fue tan aburrida que casi me duermo. Fue [MASK].,genial,0.0766
+La película fue tan aburrida que casi me duermo. Fue [MASK].,terrible,0.0492
+El público no dejó de reír durante la película. La comedia fue [MASK].,breve,0.0604
+El público no dejó de reír durante la película. La comedia fue [MASK].,corta,0.0447
+El público no dejó de reír durante la película. La comedia fue [MASK].,divertida,0.0383
+El público no dejó de reír durante la película. La comedia fue [MASK].,buena,0.0363
+El público no dejó de reír durante la película. La comedia fue [MASK].,larga,0.0352
+Las escenas oscuras y los sonidos aterradores provocaron miedo. La película fue [MASK].,exitosa,0.0387
+Las escenas oscuras y los sonidos aterradores provocaron miedo. La película fue [MASK].,horrible,0.0351
+Las escenas oscuras y los sonidos aterradores provocaron miedo. La película fue [MASK].,genial,0.0316
+Las escenas oscuras y los sonidos aterradores provocaron miedo. La película fue [MASK].,rápida,0.0273
+Las escenas oscuras y los sonidos aterradores provocaron miedo. La película fue [MASK].,perfecta,0.0267
+Los actores interpretaron sus personajes de manera convincente. La actuación fue [MASK].,impresionante,0.1008
+Los actores interpretaron sus personajes de manera convincente. La actuación fue [MASK].,excelente,0.0639
+Los actores interpretaron sus personajes de manera convincente. La actuación fue [MASK].,espectacular,0.0569
+Los actores interpretaron sus personajes de manera convincente. La actuación fue [MASK].,brillante,0.0333
+Los actores interpretaron sus personajes de manera convincente. La actuación fue [MASK].,buena,0.0308
+La historia tenía muchos errores y un final sin sentido. El guion fue [MASK].,excelente,0.0687
+La historia tenía muchos errores y un final sin sentido. El guion fue [MASK].,escrito,0.0594
+La historia tenía muchos errores y un final sin sentido. El guion fue [MASK].,pobre,0.0496
+La historia tenía muchos errores y un final sin sentido. El guion fue [MASK].,corto,0.0364
+La historia tenía muchos errores y un final sin sentido. El guion fue [MASK].,largo,0.0333

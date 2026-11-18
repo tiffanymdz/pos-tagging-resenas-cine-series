@@ -1,0 +1,21 @@
+﻿consulta,id_resena,similitud,genero_principal,polaridad,texto_es
+Una película emocionante con una historia triste,sensacine_150411,0.943,Terror,positiva,Una película muy miedosa
+Una película emocionante con una historia triste,sensacine_1005277445,0.9289,Comedia,positiva,"Una película romántica e interesante, llena de diferentes escenas, paisajes, intriga y buenos diálogos"
+Una película emocionante con una historia triste,sensacine_424916,0.9255,Acción,negativa,una pelicula inpredecible basada en un libro con una trama demasiado enredada
+Una película emocionante con una historia triste,sensacine_1026586723,0.9214,Comedia,negativa,"Aburrida sin sentido ridícula Es una película llena de clichés absurdos, humor pobre y tediosa de ver"
+Una película emocionante con una historia triste,sensacine_1038007537,0.9196,Animación,positiva,"Una película adelantada a su época, simplemente maravillosa, la más grande princesa de todos los tiempos"
+Una película de terror con mucho suspenso y escenas aterradoras,sensacine_1005277445,0.9434,Comedia,positiva,"Una película romántica e interesante, llena de diferentes escenas, paisajes, intriga y buenos diálogos"
+Una película de terror con mucho suspenso y escenas aterradoras,sensacine_1001156827,0.9225,Terror,positiva,"Una película de terror muy bien dirigida, con una constante presión de miedo y es una película muy terrorifica"
+Una película de terror con mucho suspenso y escenas aterradoras,sensacine_424916,0.9103,Acción,negativa,una pelicula inpredecible basada en un libro con una trama demasiado enredada
+Una película de terror con mucho suspenso y escenas aterradoras,sensacine_1021451197,0.9103,Animación,positiva,"Salvo un par de bromas descontextualizadas y un villano final que no estuvo a la altura, DBS-SH es una película centrada en la amistad y familia"
+Una película de terror con mucho suspenso y escenas aterradoras,sensacine_147878,0.9095,Terror,positiva,"Interesante pelicula,diferente e inquietante aunque con un final algo tramposo,tiene momentos de tensión"
+Una comedia muy divertida que me hizo reír,sensacine_130599,0.905,Animación,positiva,Me encantó y me reí un monntón
+Una comedia muy divertida que me hizo reír,sensacine_1040372073,0.8947,Animación,intermedia,"Su quería verla, me ha gustado"
+Una comedia muy divertida que me hizo reír,sensacine_1416012,0.8893,Comedia,positiva,a mí me pareció una película muy entrañable y que tendríamos que aplicar todos los día a nuestra vida
+Una comedia muy divertida que me hizo reír,sensacine_1007011082,0.8852,Drama,positiva,"Me encanta esta película y quiero volver a verla, es sensacional y muy real Me recuerda mucho a un amor imposible que tenía"
+Una comedia muy divertida que me hizo reír,sensacine_150045,0.8835,Terror,negativa,Una pelicula penosa
+Una película aburrida con una historia lenta y malas actuaciones,sensacine_1005277445,0.9412,Comedia,positiva,"Una película romántica e interesante, llena de diferentes escenas, paisajes, intriga y buenos diálogos"
+Una película aburrida con una historia lenta y malas actuaciones,sensacine_150411,0.9195,Terror,positiva,Una película muy miedosa
+Una película aburrida con una historia lenta y malas actuaciones,sensacine_1004455777,0.9161,Drama,negativa,"Un inicio de película asqueroso, muy mala, el relleno es muy malo, la trama del chico malo y las motos pésimo"
+Una película aburrida con una historia lenta y malas actuaciones,sensacine_424916,0.9137,Acción,negativa,una pelicula inpredecible basada en un libro con una trama demasiado enredada
+Una película aburrida con una historia lenta y malas actuaciones,sensacine_1038007537,0.9054,Animación,positiva,"Una película adelantada a su época, simplemente maravillosa, la más grande princesa de todos los tiempos"

@@ -1,67 +1,47 @@
 
 <div align="center">
 
-# 🎬 WORD2VEC
-### Análisis de reseñas de películas mediante procesamiento de lenguaje natural
+# 🎬 ANÁLISIS DE RESEÑAS DE PELÍCULAS
+## Procesamiento de lenguaje natural con BoW, TF-IDF y Word2Vec
 
-**Proyecto de Big Data · Procesamiento de Lenguaje Natural (NLP)**
-
-**Mariel Rodríguez Arguello**  
-Colegio Universitario de Cartago (CUC)
+**Proyecto académico · Diplomado en Big Data**  
+**Integrantes:**  
+**Mariel Rodríguez** · **Tiffany Méndez** · **Felipe Artavia**  
+**Noviembre de 2026**
 
 ---
 
-**12.368 reseñas** · **BoW y TF-IDF** · **CBOW y Skip-Gram** · **Python y Jupyter Notebook**
-
-*Un proyecto reproducible para convertir opiniones escritas en representaciones numéricas y explorar relaciones semánticas.*
+**12.368 reseñas** · **CBOW y Skip-Gram** · **Python / Jupyter Notebook**
 
 </div>
 
----
-
 ## 📖 Presentación
 
-Este proyecto procesa **12.368 reseñas de películas** procedentes del archivo `resenas_mongodb.csv`. El análisis utiliza el texto en español (`texto_es`) para construir representaciones numéricas con **Bag of Words (BoW)**, **TF-IDF** y **Word2Vec**, mediante sus dos arquitecturas: **CBOW** y **Skip-Gram**.
+Este proyecto analiza reseñas cinematográficas mediante técnicas de procesamiento de lenguaje natural (PLN). Se estudia la distribución de los datos y se comparan representaciones de texto basadas en **Bag of Words (BoW)**, **TF-IDF** y **Word2Vec**, utilizando sus variantes **CBOW** y **Skip-Gram**.
 
-Además de entrenar modelos de palabras, se calcula un **vector promedio por reseña**, de manera que cada comentario tenga su propia representación vectorial. Los resultados se entregan listos para consultar, sin necesidad de entrenar nuevamente.
+El notebook `07_word2vec_analisis(1).ipynb` contiene el análisis y las visualizaciones. El módulo `embeddings_w2v.py` permite generar nuevamente los archivos procesados y entrenar modelos cuando sea necesario.
 
 ## 🎯 Objetivos
 
-- Preparar y representar las reseñas en español para su análisis computacional.
-- Construir matrices dispersas BoW y TF-IDF.
-- Entrenar modelos Word2Vec con CBOW y Skip-Gram.
-- Obtener vectores de 100 dimensiones por reseña para cada arquitectura.
-- Mantener la correspondencia entre los vectores, las matrices y `id_resena`.
-- Facilitar la ejecución del proyecto en diferentes computadoras.
+- Explorar las reseñas por género, polaridad, calificación y longitud del texto.
+- Representar los textos mediante BoW y TF-IDF.
+- Obtener vectores de reseñas con Word2Vec, mediante CBOW y Skip-Gram.
+- Visualizar las representaciones y discutir sus diferencias y limitaciones.
 
-## 🧠 Técnicas utilizadas
-
-| Técnica | ¿Qué representa? | Resultado |
-|:--|:--|:--|
-| **BoW** | Frecuencia de términos en las reseñas | `bow.npz` |
-| **TF-IDF** | Importancia relativa de los términos | `tfidf.npz` |
-| **Word2Vec CBOW** | Aprende representaciones de palabras a partir de su contexto | `modelo_cbow.model` y `vectores_cbow.csv.gz` |
-| **Word2Vec Skip-Gram** | Aprende representaciones prediciendo palabras del contexto | `modelo_skip_gram.model` y `vectores_skip_gram.csv.gz` |
-
-> **Nota metodológica:** los archivos `vectores_*.csv.gz` contienen un vector **promedio de palabras por reseña**, no una lista de vectores individuales para cada palabra. Los modelos `.model` conservan las representaciones aprendidas de las palabras.
-
-## 🗂️ Organización del proyecto
+## 🗂️ Estructura del proyecto
 
 ```text
 Proyecto_Word2Vec/
-│
 ├── README.md
 ├── requirements.txt
+├── 07_word2vec_analisis(1).ipynb
 ├── embeddings_w2v.py
-├── 03_word2vec_analisis.ipynb
-│
 ├── data/
 │   └── resenas_mongodb.csv
-│
 └── resultados/
+    ├── ids_resenas.csv
     ├── bow.npz
     ├── tfidf.npz
-    ├── ids_resenas.csv
     ├── vocabulario.csv
     ├── vectores_cbow.csv.gz
     ├── vectores_skip_gram.csv.gz
@@ -69,120 +49,100 @@ Proyecto_Word2Vec/
     └── modelo_skip_gram.model
 ```
 
-## 💻 Requisitos del sistema
+> **Nota:** los archivos de `resultados/` y `data/` deben estar presentes para ejecutar el notebook directamente. Si no se incluyen, se pueden regenerar con el módulo Python y el CSV original. Los nombres indicados corresponden a los archivos que espera el notebook o genera el módulo.
 
-| Componente | Recomendación |
-|:--|:--|
-| Sistema operativo | Windows, macOS o Linux |
-| Python | Versión 3.10, 3.11 o 3.12, de 64 bits |
-| Internet | Necesario para instalar dependencias; no para procesar las reseñas |
-| Software opcional | JupyterLab para abrir el notebook |
+## 💻 Requisitos
 
-El proyecto usa **rutas relativas** y no depende de carpetas personales ni de letras de unidad específicas.
+- Python **3.10 o superior**.
+- Jupyter Notebook o JupyterLab (también se puede usar PyCharm o VS Code con soporte para notebooks).
+- Bibliotecas: `numpy`, `pandas`, `matplotlib`, `scipy`, `scikit-learn`, `gensim`, `notebook`.
+
+Archivo sugerido `requirements.txt`:
+
+```text
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+gensim
+notebook
+```
 
 ## 🚀 Instalación y ejecución
 
-### 1. Preparar la carpeta
+**1.** Descomprimir el proyecto y abrir una terminal **dentro de la carpeta `Proyecto_Word2Vec`**.
 
-Descargar y **extraer completamente** el archivo ZIP. No ejecutar el notebook directamente desde el archivo comprimido.
+**2.** Crear y activar un entorno virtual:
 
-Abrir una terminal en la carpeta principal, donde se encuentra `requirements.txt`.
-
-### 2. Crear y activar un entorno virtual
-
-**Windows (PowerShell o Símbolo del sistema):**
+**Windows (PowerShell):**
 
 ```powershell
-py -3 -m venv .venv
-.venv\Scripts\activate
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m notebook
 ```
 
-**macOS o Linux:**
+**macOS / Linux:**
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
+./.venv/bin/python -m pip install -r requirements.txt
+./.venv/bin/python -m notebook
 ```
 
-### 3. Instalar las dependencias
+**3.** En Jupyter, abrir `07_word2vec_analisis(1).ipynb` y ejecutar las celdas en orden.
 
-```bash
-python -m pip install -r requirements.txt
-```
+> **Importante:** el notebook utiliza `Path.cwd()` para localizar `data/` y `resultados/`. Por eso, Jupyter debe iniciarse desde la carpeta principal del proyecto. Si aparece el mensaje «Abra Jupyter desde la carpeta del proyecto», verificar la ubicación de la terminal y del directorio de trabajo del notebook.
 
-### 4. Ejecutar el procesamiento completo (opcional)
+## 🔄 Regeneración de resultados (opcional)
+
+Si se dispone de `data/resenas_mongodb.csv` pero faltan los resultados, ejecutar **desde la carpeta principal**:
 
 ```bash
 python embeddings_w2v.py
 ```
 
-Este paso vuelve a generar los resultados y puede tardar varios minutos según el equipo. **Si solo se desea revisar el análisis, no hace falta ejecutarlo:** los resultados están incluidos en `resultados/`.
+En Windows también se puede usar:
 
-### 5. Abrir el análisis en Jupyter
-
-```bash
-python -m jupyter lab
+```powershell
+.\.venv\Scripts\python.exe embeddings_w2v.py
 ```
 
-Abrir el archivo `03_word2vec_analisis.ipynb` y ejecutar las celdas en orden. Para visualizar resultados existentes, conservar la estructura de carpetas original.
+El módulo valida la columna `id_resena`, procesa `texto_es`, genera las matrices BoW y TF-IDF, entrena los modelos Word2Vec y exporta los vectores por reseña. El entrenamiento puede tardar según el equipo y los valores pueden diferir ligeramente si se vuelven a entrenar los modelos. **No es necesario reentrenar** si los resultados ya están disponibles.
 
-## 📦 Archivos de resultados
+## 📊 Contenido del análisis
 
-| Archivo | Descripción |
-|:--|:--|
-| `ids_resenas.csv` | Identificadores de las 12.368 reseñas, en el orden usado por las matrices |
-| `bow.npz` | Matriz dispersa de frecuencias de palabras |
-| `tfidf.npz` | Matriz dispersa de ponderaciones TF-IDF |
-| `vocabulario.csv` | Términos correspondientes a las columnas de las matrices |
-| `vectores_cbow.csv.gz` | Identificador y 100 dimensiones por reseña, obtenidas con CBOW |
-| `vectores_skip_gram.csv.gz` | Identificador y 100 dimensiones por reseña, obtenidas con Skip-Gram |
-| `modelo_cbow.model` | Modelo Word2Vec CBOW entrenado |
-| `modelo_skip_gram.model` | Modelo Word2Vec Skip-Gram entrenado |
+| Componente | Descripción |
+|---|---|
+| Exploración inicial | Géneros, polaridad y calificaciones de las reseñas |
+| Longitud de los textos | Distribución de palabras y caracteres |
+| BoW | Frecuencia de términos sin información de orden |
+| TF-IDF | Importancia relativa de los términos en el corpus |
+| CBOW | Representaciones aprendidas a partir del contexto |
+| Skip-Gram | Representaciones aprendidas al predecir palabras del contexto |
+| PCA | Proyección bidimensional para visualizar vectores de reseñas |
 
-**Importante:** `.csv.gz` es un archivo CSV comprimido con **gzip**; no es un ZIP. Pandas puede abrirlo directamente sin descomprimirlo manualmente.
+## 🔍 Interpretación de resultados
 
-## ✅ Comprobación de integridad
+Los gráficos permiten observar características generales del corpus y visualizar las representaciones obtenidas por cada modelo. Una proyección PCA muestra una reducción a dos dimensiones: **la cercanía visual de los puntos no demuestra por sí sola calidad semántica superior**. Para evaluar las diferencias entre CBOW y Skip-Gram deben considerarse también las similitudes y los resultados de las consultas realizadas.
 
-Ejecutar el siguiente código desde la carpeta principal del proyecto:
+## 🧩 Solución de problemas frecuentes
 
-```python
-import pandas as pd
-from scipy.sparse import load_npz
+- **`FileNotFoundError`:** revisar que `data/resenas_mongodb.csv` y la carpeta `resultados/` estén en las rutas indicadas y que Jupyter se haya abierto desde la raíz.
+- **`ModuleNotFoundError`:** instalar los paquetes en el mismo entorno de Python seleccionado como kernel del notebook.
+- **Error al leer modelos o vectores:** verificar que los archivos estén completos y que no se haya cambiado su nombre.
+- **Resultados distintos tras entrenar:** es posible obtener pequeñas variaciones entre ejecuciones o entornos; conservar los archivos originales si se necesita reproducir el análisis presentado.
 
-ids = pd.read_csv("resultados/ids_resenas.csv")
-cbow = pd.read_csv("resultados/vectores_cbow.csv.gz")
-skip_gram = pd.read_csv("resultados/vectores_skip_gram.csv.gz")
+## ✅ Conclusión
 
-assert len(ids) == len(cbow) == len(skip_gram) == 12368
-assert ids["id_resena"].equals(cbow["id_resena"])
-assert ids["id_resena"].equals(skip_gram["id_resena"])
-assert load_npz("resultados/bow.npz").shape[0] == len(ids)
-assert load_npz("resultados/tfidf.npz").shape[0] == len(ids)
-
-print("✓ Las 12.368 reseñas están correctamente alineadas.")
-```
-
-Esta verificación comprueba que el número y orden de las reseñas coinciden en las matrices y en los vectores.
-
-## 🔍 Consideraciones técnicas
-
-- **Idioma de análisis:** español, a partir de `texto_es`.
-- **Unidad de análisis:** una reseña identificada mediante `id_resena`.
-- **Dimensionalidad Word2Vec:** 100 componentes por vector promedio.
-- **Reproducibilidad:** se emplean semilla fija y un trabajador durante el entrenamiento; pueden existir pequeñas diferencias numéricas entre plataformas o versiones de bibliotecas.
-- **Portabilidad:** para trabajar en otra computadora, trasladar la carpeta completa e instalar las dependencias del archivo `requirements.txt`.
-
-## 🏁 Conclusión
-
-El proyecto permite comparar distintas formas de representar reseñas de películas: desde enfoques basados en frecuencia (**BoW** y **TF-IDF**) hasta representaciones distribuidas que incorporan información del contexto lingüístico (**Word2Vec**). La entrega conserva los identificadores y ofrece resultados reutilizables para análisis y visualización posteriores.
+El proyecto integra técnicas clásicas de vectorización y modelos de embeddings para explorar reseñas de películas. La comparación entre BoW, TF-IDF, CBOW y Skip-Gram permite reconocer las diferencias entre representar frecuencias de palabras y aprender relaciones a partir del contexto. Su organización separa el análisis en Jupyter del procesamiento reutilizable en Python.
 
 ---
 
 <div align="center">
 
-**Proyecto académico · Big Data**  
-**Mariel Rodríguez Arguello**
-
-*Procesamiento de Lenguaje Natural aplicado a reseñas cinematográficas*
+**Proyecto Word2Vec · Big Data · 2026**  
+*Documentación para instalación, ejecución y consulta académica.*
 
 </div>
